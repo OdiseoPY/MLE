@@ -52,6 +52,64 @@ $$
 * Still solved with standard linear regression (ordinary least squares).
 
 ---
+### 1. Underfitting in Polynomial Regression
+
+-   **Underfitting** = model is too simple to capture the true relationship.
+    
+-   Example: if the true relation is
+    
+    y=2x3+x2+5y = 2x^3 + x^2 + 5y=2x3+x2+5
+    
+    but you fit only a **linear model**
+    
+    y=β0+β1xy = β₀ + β₁xy=β0​+β1​x
+    
+    or a **quadratic model**
+    
+    y=β0+β1x+β2x2y = β₀ + β₁x + β₂x^2y=β0​+β1​x+β2​x2
+    
+    → the model will **miss the cubic pattern**, giving biased predictions.
+    
+
+----------
+
+### 2. How to control underfitting
+
+-   **Increase model complexity**:
+    
+    -   Use higher polynomial degree (x3,x4...x^3, x^4...x3,x4...) if needed.
+        
+    -   Example: going from degree=2 (parabola) to degree=3 (cubic) reduces underfitting if the true relation is cubic.
+        
+-   **Add more features**:
+    
+    -   If the relation depends on more variables, not just xxx, include them.
+        
+-   **Check data transformations**:
+    
+    -   Sometimes log, sqrt, or interaction terms (x1×x2x_1 \times x_2x1​×x2​) better capture the relationship.
+        
+
+----------
+
+### 3. Balance of underfitting vs overfitting
+
+-   **Too low degree** → underfitting.
+    
+-   **Too high degree** → overfitting.
+    
+-   **Right degree + regularization** → good generalization.
+    
+
+This balance is often found using **cross-validation** (testing models on held-out data).
+
+----------
+
+👉 So:
+
+-   **Underfitting** in polynomial regression is controlled by **increasing the degree of polynomial features** (making the model more flexible).
+    
+-   **Overfitting** is controlled by **regularization** (Ridge/Lasso) or reducing degree.
 
 ### 4. Why polynomial regression may not be optimal
 
