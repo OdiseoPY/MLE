@@ -51,3 +51,7 @@ git clone https://github.com/Savvythelegend/MLE.git
 cd MLE
 jupyter notebook ml/02-implementations/implementations/regression/logistic_regression.ipynb
 ```
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=Savvythelegend/MLE&type=date&legend=top-left)](https://www.star-history.com/#Savvythelegend/MLE&type=date&legend=top-left)
